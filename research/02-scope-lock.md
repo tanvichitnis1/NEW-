@@ -84,23 +84,9 @@ a checklist; an introduction to a private CMO or an MNC hub has to earn attentio
 build conviction. What has changed is that the narrative job is now primary and the
 compliance job is a constraint on it, rather than the reverse.
 
-### Design consequence: a modular proof architecture
-
-A single linear deck cannot introduce EOV to a federal government entity, a family
-conglomerate, a mid-market founder and an MNC regional hub with equal force. The
-answer is not four decks, and it is not one generic deck. It is:
-
-- **A fixed spine** — who EOV is, why it exists, how it works, what it has proved.
-  Identical every time. This carries the positioning and does the persuading.
-- **Interchangeable proof modules** — segment-specific case evidence, credentials and
-  relevance, swapped per audience without touching the spine.
-- **A compliance appendix** — ICV, Emiratisation, licensing, certifications,
-  registrations, methodology, capacity and past-performance evidence. Dead weight in a
-  CMO meeting, decisive in a tender. Detached by default, attached when bidding.
-
-This is now a **requirement on the research**, not a later design choice: Workstream E
-must establish what the spine has to contain to work for all four audiences, and the
-segment work in C must produce the proof modules.
+**No deck structure is specified here.** How the deck is built is a Stage 2+ question
+and is explicitly out of scope. The only thing this decision does is set what the
+research must cover.
 
 ### Research consequence
 

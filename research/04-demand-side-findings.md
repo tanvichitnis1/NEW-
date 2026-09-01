@@ -35,25 +35,27 @@ The most useful finding is also the most inconvenient one for a traditional cred
 | CMOs frequently defer the decision to **the team who will work with the agency daily** — so all client attendees must be engaged equally, not just the senior one | M | TrinityP3 |
 | Traditional PowerPoint is not always the best format; interactive microsites, video reels and online portfolios are credible alternatives | M | Multiple |
 
-### Direct implications for EOV's deck
+### What these findings tell us about the market
 
-1. **The spine cannot be a capability recital.** Every source converges on this. The
-   deck's job is to build confidence and reduce perceived risk, not to enumerate services.
-   This directly validates the modular architecture in the scope lock.
-2. **A tension the design must resolve.** The deck must be substantive enough to
-   pre-qualify EOV *before* a meeting, yet a first meeting is explicitly the wrong place
-   to present it in full. This argues for the deck as a **leave-behind and send-ahead
-   document** with a much shorter in-room cut — a third front-end alongside the
-   narrative and compliance versions. Flagged for the synthesis gate.
-3. **"Verifiable" is the operative word in case studies.** EOV cannot use unquantified
-   project descriptions. This escalates the evidence-collection task from useful to
-   blocking — see §5.
-4. **Every stated number becomes a liability if wrong.** With a government-weighted
-   roster where results may be confidential, EOV needs metrics it can defend in the room.
-5. **Named people are required, not optional** — and this is a genuine EOV advantage.
-   A small independent can credibly promise that the people in the deck are the people
-   on the account. Network agencies structurally cannot, which is the origin of the
-   industry's most persistent complaint (§2).
+Recorded as market intelligence. Nothing here specifies how anything gets built —
+that is a Stage 2 question and out of scope.
+
+1. **Buyers in this category are information-saturated and confidence-starved.**
+   Every source converges on it. The scarce commodity in agency selection is not
+   capability information, it is trust and risk reduction.
+2. **An unresolved tension exists in the buying process itself.** Buyers want enough
+   substance to pre-qualify an agency before meeting it, yet the first meeting is
+   explicitly not the venue for a full presentation. Worth understanding properly,
+   because it means the introduction and the meeting are doing two different jobs
+   for the buyer.
+3. **Verifiability is the operative standard for case evidence** — not richness,
+   not volume. Unquantified project descriptions do not register as proof.
+4. **A wrong or undefendable figure is worse than no figure.** The downside is
+   asymmetric: it loses the meeting.
+5. **Buyers expect named individuals.** The persistent industry complaint behind
+   this is senior-talent bait-and-switch — the people who present are not the people
+   who deliver. Structurally, small independents can answer this and network agencies
+   cannot, which is worth testing against EOV's competitive set in Workstream B.
 
 ---
 
@@ -148,26 +150,23 @@ where the genuinely useful competitive intelligence for EOV will be found.
 
 ---
 
-## 5. Escalated: the evidence-collection blocker
+## 5. Escalated: the citable-evidence question
 
-Three separate findings above converge on the same requirement, which raises it from a
-task to a dependency:
+Three findings above converge on the same constraint, which makes it a research
+question rather than a later production detail:
 
-- Case studies must carry **specific, verifiable metrics**
-- Clients want the **journey**, including what went wrong
+- Case evidence must carry **specific, verifiable metrics**
+- Buyers want the **journey**, including what went wrong
 - A wrong or undefendable figure **loses the meeting**
 
-EOV cannot produce a credible introduction deck without quantified, permissioned,
-defensible case evidence. For a government-weighted roster this is genuinely hard —
-results are often confidential, and client names may not be citable at all.
+For a government-weighted roster this is genuinely hard — outcomes are often
+confidential and client names may not be citable at all.
 
-**This needs resolving early, not at deck-build time**, because if EOV cannot cite
-named government clients or quantified outcomes, the entire proof architecture has to be
-designed around that constraint (anonymised sector cases, methodology-led proof,
-third-party validation, capability demonstrations) rather than retrofitted when the
-constraint is discovered. Added to the client-input list as a priority question.
-
----
+**Why it belongs in the research phase:** whether EOV can cite named public-sector
+clients and quantified outcomes determines what kind of proof is even available to it,
+which in turn determines which market positions are open to EOV and which are closed.
+It is an input to the whitespace analysis in Workstream D, not a production question.
+Added to the client-input list.
 
 ## 6. Open items for the full Workstream C pass
 
