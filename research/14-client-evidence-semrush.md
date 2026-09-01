@@ -6,6 +6,10 @@ Semrush pull, September 2026. Published:
 These are **third-party estimates of organic search visibility**, not client analytics.
 That is what makes them usable in a credentials deck: a prospect can reproduce them.
 
+> **Scope: Saudi Arabia is out.** Every Forrey & Galland figure below is read against the
+> **UAE database only**. The domain ranks in other markets; none of that is claimed here,
+> because it was not this engagement's work.
+
 ---
 
 ## 1. Defendable claims
@@ -14,7 +18,7 @@ That is what makes them usable in a credentials deck: a prospect can reproduce t
 |---|---|---|
 | Forrey & Galland organic keyword coverage growth | **75 → 254, 3.4×** (Jan 2024 – Aug 2026) | Semrush, UAE database |
 | Paid search dependency | **0 paid keywords running** (Aug 2026); near-zero throughout | Semrush |
-| Market reach | **22 markets** with organic presence | Semrush, all databases |
+| Peak organic traffic | **1,510 monthly visits** (Aug 2025), from 842 (Jan 2024) | Semrush, UAE database |
 | KGS organic reach in India | **17 → 96 monthly visits, 5.6×**; peak 213 (Jul 2025) | Semrush, India database |
 | KGS group visibility | **23 regional databases** | Semrush |
 
@@ -37,25 +41,26 @@ through 2025–26.
 > The keyword series is robust. The traffic series needs client analytics to read
 > honestly — worth asking them for.
 
-### Organic traffic by market, Aug 2026
+### The strategic finding: coverage tripled, sessions did not follow
 
-| Market | Visits/mo | Keywords |
-|---|---:|---:|
-| **Saudi Arabia** | **511** | 14 |
-| United Arab Emirates | 295 | 254 |
-| Germany | 117 | 2 |
-| Germany (mobile) | 90 | 1 |
-| Kuwait | 8 | 4 |
-| United States | 3 | 25 |
+From February 2026 the two series separate — keywords 97 → 254 while traffic 951 → 295.
+**That gap is the most useful thing in this pull**, and it is not a credentials point. It
+is a live commercial question the client is carrying and probably has not framed.
 
-**The strategic finding: the largest organic audience is not in the UAE.** A Dubai
-maison whose biggest search audience sits in **Saudi Arabia** — 511 vs 295 — from just
-14 keywords (36 visits per keyword, against roughly 1 in the UAE). High-volume head
-terms, not long-tail. Germany third at 117 is unexplained and worth investigating.
+Three explanations, not separable from this data:
 
-This is the most commercially valuable item in the pull, and it is **an insight the
-client would pay for** rather than a credentials point. Presenting it back demonstrates
-capability better than any traffic figure.
+1. **Incomplete recent data.** Semrush's latest one or two months revise upward. Cheapest
+   explanation; rule out first.
+2. **Long-tail dilution.** A widening catalogue ranks for more terms at lower positions,
+   each contributing almost nothing.
+3. **AI Overviews absorbing clicks.** The answer is served on the results page and the
+   visit never happens — visible across content-led sites through 2025–26, and the one
+   with real strategic consequence.
+
+Separating them needs the client's own analytics; impressions against clicks in Search
+Console settles it in an afternoon. **Presenting that question back — with the three
+hypotheses and the test that resolves them — demonstrates more capability than any
+traffic figure.** It shows EOV reads data rather than reports it.
 
 ---
 
