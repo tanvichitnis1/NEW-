@@ -1,6 +1,6 @@
 # 20 · Naming the EOV Operating Model
 
-**Status:** options for decision. Nothing here is invented — every candidate is
+**Status:** option generation stands. **The recommendation in §6 is superseded by `21-model-naming-stress-test.md`.** Nothing here is invented — every candidate is
 derived from a commitment already present in the existing EOV credentials deck.
 
 **Artifact:** https://claude.ai/code/artifact/2e5d05fe-dc03-4177-892d-f15e7a3a06f6
