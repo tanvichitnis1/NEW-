@@ -1,5 +1,12 @@
 # 26 · eov.ae Extract — Findings
 
+> **SUPERSEDED IN PART by `27-asset-intelligence.md`.** A second, deeper
+> extract found 96 assets including **7 videos (2 EOV-owned)** and recovered
+> client names from original upload filenames. The "no video anywhere" and
+> "~25–30 unlabelled work images" statements below are **wrong**. Section 1
+> understated the government position: five clients are corroborated by
+> project photography, not just logos.
+
 **Source:** client-supplied extract of the live site, 1 September 2026, plus a
 76-file image manifest. Archived at `research/source/`. eov.ae and
 static.wixstatic.com are both blocked by this environment's network policy, so
@@ -145,7 +152,7 @@ Solutions 11 · Home 8 · Innovation 6 · Careers 2 · Contact 1.
 
 Mostly stock photography and interface decoration. Roughly **25–30 files that
 look like real EOV work**, sitting in two unlabelled galleries with no
-captions, no client attribution and no dates. **No video anywhere.**
+captions, no client attribution and no dates. **No video anywhere.** *(WRONG — see `27`.)*
 
 That is a mood board, not a credentials deck. **Item 1 stays blocking.**
 
