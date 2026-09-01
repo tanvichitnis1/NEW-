@@ -8,30 +8,40 @@ Published: **https://claude.ai/code/artifact/626b5ece-081f-4dd1-8aaa-5fc2ce7166d
 
 ---
 
-## 1. Positioning statement
+## 1. Positioning statement — REVISED
+
+**Client correction (Sept 2026):** the audience is not government-led. It is **SMEs,
+large enterprises, B2B, B2C and government**. This resolves the Stage 2 lead-position
+question in favour of the **discipline** position, because a government-fluency lead
+would be irrelevant or alienating to four of the five audiences.
 
 | | |
 |---|---|
-| **For** | UAE government entities, semi-government bodies and organisations that operate to institutional standards |
-| **Who** | need marketing and communications that will clear approval and procurement, and need it delivered — not only advised on |
-| **Our** | EOV is an Emirati-owned integrated marketing agency, working inside UAE institutions since 2006 |
-| **That provides** | strategy, brand, platforms, communications and demand as one accountable engagement, run inside the frameworks government entities actually work to |
-| **Unlike** | communications consultancies that advise without building, delivery agencies that build without institutional judgement, and networks whose senior team leaves after the pitch |
-| **Our USP** | Twenty years inside UAE institutions means we know how the work gets approved, not just how it gets made |
+| **For** | organisations across the UAE and GCC that have to justify what they spend on marketing — government entities, large enterprises, B2B firms and growing businesses alike |
+| **Who** | need strategy, brand, platform, communications and demand run as one programme, with a traceable line from spend to outcome |
+| **Our** | EOV is an Emirati-founded integrated marketing agency, working in the UAE since 2006 |
+| **That provides** | the full capability set under one accountable relationship, sequenced so that decisions come before spend |
+| **Unlike** | agencies that sell channels before defining what they are meant to move, and networks that fragment delivery across separate units |
+| **Our USP** | **No media runs until tracking is verified. Every claim carries a source before it is published.** |
 
 ### The discriminating line
 
-> **We know how the work gets approved — not just how it gets made.**
+> **We don't run media until we can prove what it moved.**
 
-Every competitor can claim they know how work gets *made* — category table stakes.
-Almost none can credibly claim fluency in how it gets **approved**: published
-frameworks, mandated coordination, procurement scoring, institutional sign-off. It is
-earned by time served rather than by hiring, which makes it hard to copy.
+**Why this works across all five audiences.** The unifying condition is not sector, it is
+**accountability for spend** — true of an owner spending their own money, a
+CFO-scrutinised enterprise, a B2B firm with a long attribution cycle, and a government
+entity answerable publicly. The Tracking Gate answers all of them with one rule.
 
-It also converts "Emirati-owned, twenty years" from heritage into an operational
-capability — the conversion the whitespace analysis identified as necessary.
+**Why it is defensible.** No agency in the competitive set — Publicis included — states a
+hard rule refusing media spend until measurement is verified. It is falsifiable,
+operational, and it costs EOV revenue to honour, which is what makes it credible where
+"results-driven" is not.
 
----
+**Why not the institutional lead.** `12` established that EOV's citable proof is
+overwhelmingly commercial. This correction adds a second, independent reason: even if the
+government roster were nameable, leading on it would misaddress most of the audience.
+**Government becomes one proof module among several, not the position.**
 
 ## 2. Core narrative
 
@@ -140,9 +150,9 @@ wrong or undefendable figure loses the meeting outright. The downside is asymmet
 
 Structurally sound, **not yet ratified**. Settle these first:
 
-1. **Primary Dubai and UAE GMO communication guides.** Pillar 1 assumes the 2025
-   formalisation protects incumbents. If it commoditises instead, Pillar 1 weakens and
-   the whole order changes.
+1. ~~**Primary Dubai and UAE GMO communication guides.**~~ **Downgraded.** With the
+   audience spanning five segments and the lead moved to discipline, the guides now
+   inform one proof module rather than the position. Useful, no longer blocking.
 2. **EOV's citable roster** — nameable entities, quantified outcomes, tenure. Pillar 1 is
    unprovable without it; the market's proof bar is attributed outcomes and retention
    statistics, not capability descriptions.
@@ -155,3 +165,25 @@ Structurally sound, **not yet ratified**. Settle these first:
 **Shelf life risk:** Boopin is moving into the same ground from the delivery side, and
 the two things it is not evidenced on — Emirati ownership and institutional process
 depth — are precisely what a well-run competitor closes first.
+
+---
+
+## 9. The new risk created by a five-segment audience
+
+**The audience is wide and the proof is narrow.** SMEs, large enterprises, B2B, B2C and
+government buy very differently, and EOV's evidenced case base is currently luxury
+retail (Forrey & Galland) and industrial-to-consumer (Ferronato). There is no named SME
+case, no named B2B case, and no nameable government case.
+
+That gap is where a prospect will push: *"who like us have you done this for?"*
+
+**The discipline position survives this** — a rule about how work is run is
+segment-independent in a way a sector claim is not. But the **proof modules must flex**,
+and building one credible case per priority segment is now the highest-value gap in the
+evidence base after the campaign capture grid.
+
+Note also the market finding this runs against: specialist capabilities are growing at
+~16.5% CAGR against ~4.68% for the market. A five-segment audience is the opposite of
+specialisation. It is defensible **only** if the proposition is a genuinely distinctive
+*how* — which the Tracking Gate is, and which "strategy, branding, digital, social, PR,
+performance, events" is not.
