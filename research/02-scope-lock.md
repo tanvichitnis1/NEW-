@@ -71,31 +71,58 @@ output is a ranked, evidenced case for which one or two lead and which are pursu
 opportunistically. The prioritisation decision returns to the client at the synthesis
 gate with the evidence attached, rather than being made now by assumption.
 
-## 4. Deck purpose — LOCKED, WITH A FLAG
+## 4. Deck purpose — REVISED AND LOCKED (client clarification)
 
-**Government tender / pre-qualification.** Compliance-led, proof-heavy, formal;
-built to satisfy published evaluation and scoring criteria.
+**Primary: a universal introduction to any prospective client.** The deck is EOV's
+front door — the first substantive thing a prospect of any type receives. **Secondary:
+it must also stand up as government tender / pre-qualification material.**
 
-**Flag 2 — this conflicts with the four-segment answer above.** A tender/PQQ document
-is a government instrument: it is structured to a procurement scoring rubric, evidences
-capability against mandatory criteria, and persuades an evaluation panel working
-through a checklist. A credentials deck for a private enterprise CMO or an MNC hub is
-a narrative instrument doing an entirely different job. One artefact cannot be
-optimised for both without being mediocre at each.
+This supersedes the earlier tender-primary answer, and **resolves Flag 2** — but in the
+direction of the harder problem, not the easier one. The two jobs are still genuinely
+different: a tender response is scored against a rubric by an evaluation panel working
+a checklist; an introduction to a private CMO or an MNC hub has to earn attention and
+build conviction. What has changed is that the narrative job is now primary and the
+compliance job is a constraint on it, rather than the reverse.
 
-**Recommendation, for decision at the synthesis gate:** build one **evidence base and
-proof architecture** serving everything, then cut two front-ends from it — a
-tender/PQQ-compliant master and a narrative credentials version. The expensive work
-(assembling citable proof) is done once; only presentation forks.
+### Design consequence: a modular proof architecture
 
-**Research consequence of this lock — significant, and it raises the value of the work:**
-UAE and GCC government tenders frequently publish their **weighted evaluation
-criteria**. That is a rare and valuable asset: the buyer's decision criteria stated
-literally, with weights attached, rather than inferred from interviews. Workstream C3
-is therefore promoted to the highest-priority demand-side thread. Sourcing published
-tender criteria, PQQ requirements, framework panel conditions and supplier
-registration prerequisites (Emiratisation, local content, ICV, licensing) takes
-precedence over generalised CMO-buying research.
+A single linear deck cannot introduce EOV to a federal government entity, a family
+conglomerate, a mid-market founder and an MNC regional hub with equal force. The
+answer is not four decks, and it is not one generic deck. It is:
+
+- **A fixed spine** — who EOV is, why it exists, how it works, what it has proved.
+  Identical every time. This carries the positioning and does the persuading.
+- **Interchangeable proof modules** — segment-specific case evidence, credentials and
+  relevance, swapped per audience without touching the spine.
+- **A compliance appendix** — ICV, Emiratisation, licensing, certifications,
+  registrations, methodology, capacity and past-performance evidence. Dead weight in a
+  CMO meeting, decisive in a tender. Detached by default, attached when bidding.
+
+This is now a **requirement on the research**, not a later design choice: Workstream E
+must establish what the spine has to contain to work for all four audiences, and the
+segment work in C must produce the proof modules.
+
+### Research consequence
+
+Government tender criteria research **retains its high priority but loses its monopoly
+on the deck's structure.** It remains uniquely valuable for a reason that has nothing
+to do with tenders specifically: UAE and GCC government tenders **publish weighted
+evaluation criteria**, which is the only place in this market where buying criteria are
+stated literally with weights attached rather than inferred. It is the best available
+evidence of what buyers actually score — a calibration instrument for the whole deck.
+
+Alongside it, Workstream C must now cover **credentials-stage buying behaviour across
+all four segments** with equal rigour: what a private-enterprise CMO, a mid-market
+owner and an MNC regional lead each want from a first introduction, how long they give
+it, what makes them take a second meeting, and what makes them discard an agency at
+first contact. That research was previously scoped as secondary. It is now core.
+
+**Note on the interaction with Flag 1:** a universal introduction deck across four
+segments raises the cost of not prioritising. The spine must be true and compelling for
+all four, which is achievable — but only if the positioning is built on something
+genuinely segment-independent (how EOV works, what it has proved, what it is
+accountable for) rather than on sector claims that ring hollow to three audiences out
+of four. Flag 1 still resolves at the synthesis gate.
 
 ---
 
@@ -105,12 +132,13 @@ precedence over generalised CMO-buying research.
 |---|---|---|
 | 1 | §2 Market definition + IDS scale calibration via global panel | Nothing can be scored until the scale is defined |
 | 2 | B — Longlist → top 15 flat ranking by IDS | The explicit client ask |
-| 3 | C3 — Published government tender evaluation criteria | Literal buying criteria; directly determines deck structure |
-| 4 | C1/C2/C4/C5 — Segment screening across all four segments | Resolves Flag 1 with evidence |
-| 5 | A — Market size, growth, depth | Contextual; sizing per segment |
-| 6 | D — Whitespace and threat map | Depends on B and C |
-| 7 | E — Benchmark, reframed to tender/PQQ documents as well as credentials decks | Depends on C3 |
-| 8 | F — Synthesis, positioning, deck brief. **Both flags resolved here.** | Gate before any build |
+| 3 | C — Credentials-stage buying behaviour across **all four segments** | The deck is a universal introduction; what makes each audience take a second meeting is now the core demand-side question |
+| 4 | C3 — Published government tender evaluation criteria | Still high value: the only source of literal, weighted buying criteria in this market. Calibrates the whole deck, and supplies the compliance appendix |
+| 5 | C1/C2/C4/C5 — Segment screening | Resolves Flag 1 with evidence; produces the interchangeable proof modules |
+| 6 | A — Market size, growth, depth | Contextual; sizing per segment |
+| 7 | D — Whitespace and threat map | Depends on B and C |
+| 8 | E — Benchmark: what a spine must contain to work for four audiences at once, plus tender/PQQ documents | Depends on C |
+| 9 | F — Synthesis, positioning, deck brief. **Both flags resolved here.** | Gate before any build |
 
 ## 6. Unchanged
 
