@@ -203,53 +203,69 @@ S["Ferronato"] = shell(pad(
     f'font-size: 25px; font-style: italic; color: {INK};">'
     f'Same owner. Same agency. Two entirely different jobs.</div>', top=64) + num("10"))
 
-# 11 OPEC VIENNA
+# 11 OPEC — THE BRIEF
 S["Vienna"] = shell(
     f'<div style="position: absolute; inset: 0; display: flex;">'
     f'<div style="width: 46%; padding: 76px 40px 76px 88px; display: flex; flex-direction: column; justify-content: center;">'
     + eyebrow("OPEC · Vienna")
-    + hl("UAE Night, Vienna. Organised by EOV.", 46)
+    + hl("UAE Night, Vienna. Organised by EOV.", 44)
     + body("A national event delivered in a foreign capital, in partnership with H.E. Suhail Al Mazrouei, Minister of Energy.", mw="30ch")
     + '</div>'
     f'<div style="width: 54%; padding: 76px 88px 76px 0; display: flex;">'
     + ph("Event photography<br>Nine images exist on the site today") + '</div></div>' + num("11"))
 
-# 12 THE CLOSE — dark
-S["TheClose"] = shell(
+# 12 OPEC — WHAT IT TOOK
+S["ViennaDelivery"] = shell(
     f'<div style="position: absolute; inset: 0; display: flex; flex-direction: column;">'
-    f'<div style="flex-grow: 1; padding: 72px 88px 0; display: flex;">'
-    + ph("The Vienna video, or its strongest single frame", dark=True) + '</div>'
-    f'<div style="padding: 34px 88px 72px;">'
-    f'<div style="font-family: {SAN}; font-size: 19px; font-weight: 400; color: {D_SLATE}; margin-bottom: 16px;">'
-    f'A fixed date. A foreign city. A country being represented.</div>'
-    f'<div style="font-family: {SER}; font-size: 52px; line-height: 1.06; color: {D_INK}; letter-spacing: -0.025em;">'
-    f'Nothing about that brief allowed a second attempt.</div>'
-    f'</div></div>' + num("12", dark=True), dark=True)
+    f'<div style="padding: 72px 88px 26px;">'
+    + eyebrow("OPEC · Vienna")
+    + hl("Everything an event needs, in a city that is not yours.", 44, mb=16)
+    + f'<div style="display: flex; gap: 40px; flex-wrap: wrap; font-family: {SAN}; font-size: 15px; '
+      f'font-weight: 500; letter-spacing: 0.06em; color: {SLATE};">'
+      f'<span>[CONCEPT]</span><span>[PRODUCTION]</span><span>[GUEST MANAGEMENT]</span>'
+      f'<span>[CONTENT]</span><span>[STAGING]</span></div>'
+    + '</div>'
+    f'<div style="flex-grow: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding: 0 88px 72px;">'
+    + ph("Arrival or venue") + ph("The room, mid-event") + ph("Ministerial moment") + '</div></div>' + num("12"))
 
-# 13 WHAT WE DO
+# 13 OPEC — THE CLOSE (dark)
+S["TheClose"] = shell(
+    f'<div style="position: absolute; inset: 0; display: flex;">'
+    f'<div style="width: 52%; padding: 76px 44px 76px 88px; display: flex; flex-direction: column; justify-content: center;">'
+    f'<div style="font-family: {SAN}; font-size: 18px; font-weight: 400; color: {D_SLATE}; margin-bottom: 22px; '
+    f'letter-spacing: 0.02em;">A fixed date. A foreign city. A country being represented.</div>'
+    f'<div style="width: 56px; height: 1px; background: {D_ACC}; margin-bottom: 26px;"></div>'
+    f'<div style="font-family: {SER}; font-weight: 400; font-size: 54px; line-height: 1.04; color: {D_INK}; '
+    f'letter-spacing: -0.028em; max-width: 15ch;">Nothing about that brief allowed a second attempt.</div>'
+    f'</div>'
+    f'<div style="width: 48%; padding: 76px 88px 76px 0; display: flex;">'
+    + ph("The Vienna video,<br>or its strongest single frame", dark=True) + '</div></div>'
+    + num("13", dark=True), dark=True)
+
+# 14 WHAT WE DO
 S["WhatWeDo"] = shell(pad(
     eyebrow("What we do") +
     hl("Six disciplines, one brief, one team.", 50, mb=28) +
     lines(["Strategy and research","Brand and creative","Digital platforms and ecommerce",
            "Communications and PR","Media planning and buying","Production, photography and events"]) +
     f'<div style="margin-top: 26px; font-family: {SAN}; font-size: 13px; color: #9BA3AC; letter-spacing: 0.04em;">'
-    f'[MARK EACH — IN-HOUSE OR PARTNER]</div>' ) + num("13"))
+    f'[MARK EACH — IN-HOUSE OR PARTNER]</div>' ) + num("14"))
 
-# 14 HOW WE WORK
+# 15 HOW WE WORK
 S["HowWeWork"] = shell(pad(
     eyebrow("How we work") +
     hl("Three things we do before anything goes live.", 50, mb=32) +
-    lines(["Success defined before spend","Measurement built before launch","Everything built in your name"]) ) + num("14"))
+    lines(["Success defined before spend","Measurement built before launch","Everything built in your name"]) ) + num("15"))
 
-# 15 THE PEOPLE
+# 16 THE PEOPLE
 S["ThePeople"] = shell(
     f'<div style="position: absolute; inset: 0; display: flex; flex-direction: column;">'
     f'<div style="padding: 72px 88px 26px;">' + eyebrow("The team")
     + hl("The people who would run your account.", 46, mb=0) + '</div>'
     f'<div style="flex-grow: 1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; padding: 0 88px 72px;">'
-    + "".join(ph("Portrait<br>Name · Role<br>One line") for _ in range(4)) + '</div></div>' + num("15"))
+    + "".join(ph("Portrait<br>Name · Role<br>One line") for _ in range(4)) + '</div></div>' + num("16"))
 
-# 16 HOW TO START
+# 17 HOW TO START
 S["Main"] = shell(pad(
     eyebrow("Next step") +
     hl("One contract, one team, one point of accountability.", 50) +
@@ -257,14 +273,14 @@ S["Main"] = shell(pad(
     f'<div style="margin-top: 46px; padding-top: 26px; border-top: 1px solid {RULE}; font-family: {SAN}; '
     f'font-size: 17px; line-height: 1.7; color: {INK};">'
     f'[NAME], [TITLE]<br>[EMAIL] · [PHONE]<br>'
-    f'<span style="color: {SLATE};">eov.ae · Abu Dhabi · Dubai</span></div>' ) + num("16"))
+    f'<span style="color: {SLATE};">eov.ae · Abu Dhabi · Dubai</span></div>' ) + num("17"))
 
 
 for name, src in S.items():
     open(f"{name}.dc.html", "w").write(src)
 
 order = ["Cover","WhoWeAre","TheProblem","TheClaim","Clients","ForreyBaseline","ForreyCalendar",
-         "OneGroup","KGS","Ferronato","Vienna","TheClose","WhatWeDo","HowWeWork","ThePeople","Main"]
+         "OneGroup","KGS","Ferronato","Vienna","ViennaDelivery","TheClose","WhatWeDo","HowWeWork","ThePeople","Main"]
 arts = [{"file": f"{n}.dc.html", "x": (i % 4) * (W + 130), "y": (i // 4) * (H + 190), "w": W, "h": H}
         for i, n in enumerate(order)]
 
@@ -277,7 +293,7 @@ canvas = {
      "text": "BEAT 3 · The hinge. Inverted on purpose.\nStated once, never repeated."},
     {"id": "beat-4", "x": 0, "y": 755, "w": 640,
      "text": "BEAT 4 · Evidence, rising in stakes.\nForrey & Galland sets the baseline; KGS + Ferronato demonstrate range side by side; Vienna closes."},
-    {"id": "beat-5", "x": 0, "y": 2495, "w": 560,
+    {"id": "beat-5", "x": 2820, "y": 2495, "w": 560,
      "text": "BEAT 5 · Risk. Disciplines sit here, after the proof — a list read before the evidence is a claim."}
   ],
   "launch": {"view": "canvas"}
