@@ -76,8 +76,8 @@ function caseSlide(o){
     fontSize:pt(12.7), bold:true, charSpacing:2.4, color:L_MUTED, align:"center", valign:"middle", isTextBox:true });
   eyebrow(s, o.eyebrow);
   title(s, o.title, false, { w:X(500), size:o.size||pt(34), ls:pt(41), h:X(190) });
-  lead(s, o.lead, false, { y:X(300), w:X(500), h:X(90) });
-  stat(s, o.stats, X(430), false, MG, X(168));
+  lead(s, o.lead, false, { y:X(250), w:X(500), h:X(110) });
+  stat(s, o.stats, X(420), false, MG, X(168));
   footer(s, false);
   if (o.notes) s.addNotes(o.notes);
   return s;
@@ -121,7 +121,7 @@ function divider(t, sub){
 /* 02 WHO WE ARE */
 { const s = slide();
   s.addShape(p.ShapeType.rect, { x:IMX, y:0, w:IMW, h:H, fill:{ color:GREY }, line:{ type:"none" } });
-  s.addText("TEAM OR OFFICE PHOTOGRAPH", { x:IMX+X(30), y:H/2-X(20), w:IMW-X(60), h:X(40), fontFace:F,
+  s.addText("mohamed-yousif.png · team", { x:IMX+X(30), y:H/2-X(20), w:IMW-X(60), h:X(40), fontFace:F,
     fontSize:pt(12.7), bold:true, charSpacing:2.4, color:L_MUTED, align:"center", valign:"middle", isTextBox:true });
   eyebrow(s, "Who we are");
   title(s, "An Emirati-founded integrated marketing agency, working in the UAE since 2006.",
@@ -179,16 +179,42 @@ divider("The work.", "Four clients · rising stakes");
   s.addNotes("Replace tiles with client marks once naming consent is confirmed per client. A logo on a 2022 website is not consent to name a client in 2026.");
 }
 
-/* 07-08 FORREY & GALLAND */
+/* FORREY & GALLAND */
+{ const s = slide(true);
+  eyebrow(s, "Forrey & Galland · Paris, La Belle Époque", true);
+  title(s, "A Parisian chocolate house, reintroduced to the Gulf.", true, { size:pt(40), ls:pt(48), h:X(130) });
+  lead(s, "Two families, Forrey and Galland, founded the house in Paris in the 1900s. It now trades from The Dubai Mall, working saffron, dates, pistachios and rose into a French craft tradition.",
+    true, { y:X(230), w:X(900), h:X(70) });
+  stat(s, [["1900s","Founded, Paris"],["100","Years of the house"],["Dubai Mall","Flagship boutique"],["5-star","Hotels, airlines, VIP"]],
+    X(340), true, MG, X(220));
+  img(s, MG, X(480), X(1136), X(150), "fg-kinara-1.png", true);
+  footer(s, true);
+  s.addNotes("Founding, boutique and ingredient detail from public sources. Confirm the boutique count and whether the Paris founding date may be stated as a fact.");
+}
 caseSlide({ eyebrow:"Forrey & Galland · luxury confectionery",
   title:"Search visibility up 3.4×, with no paid media.",
-  lead:"Visibility built structurally rather than bought. The occasion calendar moves roughly eleven days a year, so the plan is rebuilt annually rather than repeated.",
+  lead:"Visibility built structurally rather than bought. Growth achieved with no paid search at any point across the period.",
   stats:[["3.4×","Visibility"],["Zero","Paid search"],["1,510","Peak visits"]],
-  image:"Product and retail photography" });
+  image:"ceylon-range.png" });
 gallerySlide({ eyebrow:"Forrey & Galland",
   title:"For a business built on occasions, the calendar is the strategy.",
-  frames:["Campaign photography","Shoot stills","Retail and event"],
-  notes:"Ramadan · Eid al-Fitr · Eid al-Adha · Diwali. Each an entire programme, not a post." });
+  frames:["fg-kinara-4.png","fg-kinara-2.png","retail-activation.png"] });
+
+/* F&G — THE CALENDAR */
+{ const s = slide();
+  eyebrow(s, "Forrey & Galland · the calendar");
+  title(s, "Four occasions, rebuilt every year.", false, { h:X(70), size:pt(38) });
+  lead(s, "The lunar calendar moves roughly eleven days a year, so nothing carries over. Each occasion runs as a full programme of product, photography, campaign, events and retail.",
+    false, { y:X(180), w:X(1000), h:X(56) });
+  ["Ramadan","Eid al-Fitr","Eid al-Adha","Diwali"].forEach((t,i) => {
+    const x = MG + i*X(288);
+    img(s, x, X(270), X(269), X(180), "hatta-ramadan.png / uae-national-day.png", false);
+    s.addText(t, { x:x, y:X(468), w:X(269), h:X(34), fontFace:F, fontSize:pt(18.7), bold:true,
+      color:L_HEAD, margin:0, isTextBox:true });
+  });
+  footer(s, false);
+  s.addNotes("Eight occasion pages exist on the site. Confirm which occasions may be shown and supply campaign imagery per occasion.");
+}
 
 /* 09 BRIDGE */
 { const s = slide(true);
@@ -198,8 +224,8 @@ gallerySlide({ eyebrow:"Forrey & Galland",
     true, { y:X(230), w:X(900), h:X(56) });
   stat(s, [["1906","Founded, Lugano"],["4th","Generation"],["16","Countries"],["100+","Markets supplied"]],
     X(320), true, MG, X(220));
-  img(s, MG, X(470), X(552), X(160), "Metallised fabric · industrial application", true);
-  img(s, MG+X(584), X(470), X(552), X(160), "Finished product · consumer range", true);
+  img(s, MG, X(470), X(552), X(160), "exhibition-stand.png", true);
+  img(s, MG+X(584), X(470), X(552), X(160), "ferronato-product.png", true);
   footer(s, true);
   s.addNotes("Confirmed by the client: KGS and Ferronato are two brands in one group. This slide is the hinge of the range argument.");
 }
@@ -209,21 +235,21 @@ caseSlide({ eyebrow:"KGS · MetaFab® · industrial B2B",
   title:"Marketing a material that shields naval vessels.",
   lead:"Metallised fabric attenuating EMF, EMI and RF at material level. Sold to engineers working to specification, on cycles measured in quarters. Most agencies decline this brief.",
   stats:[["5.6×","Visibility"],["96","Keywords"],["40–90","dB shielding"]],
-  image:"Application imagery" });
+  image:"ferronato-product.png" });
 gallerySlide({ eyebrow:"KGS · MetaFab®",
   title:"Naval vessels. Aircraft wiring. Secure courtrooms.",
-  frames:["Vessel or installation","Aircraft wiring","Material detail"] });
+  frames:["[KGS application]","[KGS wiring]","[KGS material]"] });
 
 /* 12-13 FERRONATO */
 caseSlide({ eyebrow:"Ferronato Switzerland · smart accessories",
   title:"Privacy as a product, not a promise.",
   lead:"Sleeves, pouches, totes and briefcases in metallised fabric. The benefit is physical, which is what made it provable. Global debut at the Swiss Pavilion, Expo 2020 Dubai.",
   stats:[["300k+","Pavilion visitors"],["2023","First boutique"],["4","Product lines"]],
-  image:"Product and boutique photography",
+  image:"ferronato-store.png",
   notes:"Send the PR record and this slide is finished: publications with dates and tier, retail doors, awareness study, influencer reach, and which markets US and EU distribution covers." });
 gallerySlide({ eyebrow:"Ferronato Switzerland",
   title:"One brand system across retail, film and product.",
-  frames:["Ferronato Switzerland boutique","Campaign photography","Atelier display"] });
+  frames:["ferronato-store.png","ferronato-campaign.png","ferronato-atelier.png"] });
 
 /* FILMS */
 { const s = slide();
@@ -232,7 +258,7 @@ gallerySlide({ eyebrow:"Ferronato Switzerland",
   lead(s, "Going untraceable, told through Santa.", false, { y:X(180), w:X(900), h:X(40) });
   [["Gift of Privacy",""],["Disconnect and Connect",""],["Stay off-grid",""]].forEach((it,i) => {
     const x = MG + i*X(386);
-    img(s, x, X(250), X(357), X(200), "Film still", false);
+    img(s, x, X(250), X(357), X(200), "[festive film still]", false);
     s.addText(it[0], { x:x, y:X(468), w:X(357), h:X(34), fontFace:F, fontSize:pt(18.7), bold:true,
       color:L_HEAD, margin:0, isTextBox:true });
   });
@@ -240,21 +266,50 @@ gallerySlide({ eyebrow:"Ferronato Switzerland",
   s.addNotes("Three films exist. Stills or the films themselves are the strongest asset on this case after the boutique photography.");
 }
 
-/* 14-15 OPEC */
+/* OPEC */
+{ const s = slide(true);
+  eyebrow(s, "OPEC International Seminar · Hofburg, Vienna", true);
+  title(s, "The room the UAE had to host.", true, { size:pt(45.3), ls:pt(54), h:X(110) });
+  lead(s, "The OPEC International Seminar gathers energy ministers, decision makers, diplomats and international media in Vienna. The UAE delegation is led by the Minister of Energy, with officials from ADNOC and Mubadala.",
+    true, { y:X(215), w:X(920), h:X(80) });
+  stat(s, [["700+","Delegates at the UAE dinner"],["Hofburg","Vienna"],["Ministerial","Delegation"]],
+    X(330), true, MG, X(280));
+  img(s, MG, X(470), X(1136), X(160), "eov-opec-minister.jpg", true);
+  footer(s, true);
+  s.addNotes("Delegate count, venue and delegation composition are externally documented for the OPEC International Seminar. CONFIRM which edition EOV delivered before stating the linkage — the site says 'OPEC events' plural.");
+}
 caseSlide({ eyebrow:"OPEC · UAE Night, Vienna",
   title:"A national event, delivered in a foreign capital.",
-  lead:"Organised by EOV in partnership with H.E. Suhail Al Mazrouei, Minister of Energy, around the OPEC calendar.",
+  lead:"Organised by EOV in partnership with H.E. Suhail Al Mazrouei, Minister of Energy. A fixed date in the OPEC calendar, in a city with none of a home market's suppliers or margins for error.",
   stats:[["Vienna","Foreign capital"],["Fixed","Date"],["H.E.","Ministerial partner"]],
   size:pt(38),
-  image:"Event photography",
-  notes:"Consent required — OPEC is intergovernmental and the Ministry federal. Still needed: the year, scope delivered, attendance. The website says 'OPEC events' plural." });
+  image:"eov-opec-vienna.jpg",
+  notes:"Consent required — OPEC is intergovernmental and the Ministry federal. Still needed: the year, scope delivered, attendance." });
 gallerySlide({ eyebrow:"OPEC · UAE Night, Vienna",
   title:"Nine photographs and a film exist. None have been in a deck.",
-  frames:["Arrival or venue","The room, mid-event","Ministerial moment"] });
+  frames:["eov-opec-vienna.jpg","[Vienna room]","eov-opec-minister.jpg"] });
+
+/* OPEC — THE STRAND */
+{ const s = slide();
+  eyebrow(s, "Institutional events");
+  title(s, "Not once. A standing capability.", false, { h:X(70), size:pt(38) });
+  lead(s, "The website records OPEC events in the plural, alongside the Arab SMIS Summit. Institutional event delivery is a strand of the practice rather than a single engagement.",
+    false, { y:X(180), w:X(1000), h:X(56) });
+  [["OPEC · UAE Night","Vienna"],["OPEC events","Multiple editions [CONFIRM]"],["Arab SMIS Summit","Institutional"]].forEach((it,i) => {
+    const x = MG + i*X(386);
+    img(s, x, X(265), X(357), X(190), "Event photography", false);
+    s.addText(it[0], { x:x, y:X(472), w:X(357), h:X(32), fontFace:F, fontSize:pt(18.7), bold:true,
+      color:L_HEAD, margin:0, isTextBox:true });
+    s.addText(it[1], { x:x, y:X(506), w:X(357), h:X(28), fontFace:F, fontSize:pt(15.3),
+      color:L_BODY, margin:0, isTextBox:true });
+  });
+  footer(s, false);
+  s.addNotes("This slide only ships if the plural is confirmed. If Vienna was the only one, cut it — a single event overclaimed as a capability is exactly the kind of thing a government buyer checks.");
+}
 
 /* 16 THE CLOSE */
 { const s = slide(true);
-  img(s, 0, 0, X(640), H, "The Vienna film, or its strongest frame", true);
+  img(s, 0, 0, X(640), H, "Vienna film · or eov-opec-minister.jpg", true);
   s.addText("A fixed date · a foreign city · a country represented",
     { x:X(700), y:X(230), w:X(500), h:X(50), fontFace:F, fontSize:pt(15.3), color:D_MUTED,
       lineSpacing:pt(22), margin:0, isTextBox:true });
@@ -272,7 +327,7 @@ gallerySlide({ eyebrow:"OPEC · UAE Night, Vienna",
    "SME Programme","Montajat","Dubai Challenge","SND","ILF"].forEach((t,i) => {
     const col = i % 5, row = Math.floor(i/5);
     const x = MG + col*X(232), y = X(215) + row*X(200);
-    img(s, x, y, X(209), X(140), "Project image", false);
+    img(s, x, y, X(209), X(140), "[project image]", false);
     s.addText(t, { x:x, y:y+X(150), w:X(209), h:X(30), fontFace:F, fontSize:pt(15.3), bold:true,
       color:L_HEAD, margin:0, isTextBox:true });
   });
@@ -355,7 +410,7 @@ divider("How the work runs.", "The firm · the method · the first step");
   title(s, "The people on the account.", false, { h:X(70), size:pt(38) });
   for (let i=0;i<4;i++){
     const x = MG + i*X(292);
-    img(s, x, X(215), X(269), X(280), "Portrait", false);
+    img(s, x, X(215), X(269), X(280), "mohamed-yousif.png / [portrait]", false);
     s.addText("[NAME]", { x:x, y:X(510), w:X(269), h:X(30), fontFace:F, fontSize:pt(18.7), bold:true,
       color:L_HEAD, margin:0, isTextBox:true });
     s.addText("[Role]", { x:x, y:X(544), w:X(269), h:X(28), fontFace:F, fontSize:pt(15.3),
