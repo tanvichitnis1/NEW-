@@ -69,15 +69,30 @@ function stat(s, arr, y, dark, x, gap){
 
 /* ===== ONE CASE TEMPLATE ===== */
 const IMX = X(624), IMW = W - IMX;   // image bleeds off the right edge
+function beat(s, label, body, y, h){
+  s.addText(label.toUpperCase(), { x:MG, y:y, w:X(496), h:X(18), fontFace:F, fontSize:pt(11),
+    bold:true, charSpacing:2.6, color:L_MUTED, margin:0, valign:"middle", isTextBox:true });
+  s.addText(body, { x:MG, y:y+X(24), w:X(496), h:X(h), fontFace:F, fontSize:pt(15.3),
+    color:L_BODY, lineSpacing:pt(21), margin:0, valign:"top", isTextBox:true });
+}
 function caseSlide(o){
   const s = slide();
   s.addShape(p.ShapeType.rect, { x:IMX, y:0, w:IMW, h:H, fill:{ color:GREY }, line:{ type:"none" } });
-  s.addText(o.image.toUpperCase(), { x:IMX+X(30), y:H/2-X(20), w:IMW-X(60), h:X(40), fontFace:F,
+  s.addText(o.image.toUpperCase(), { x:IMX+X(30), y:X(228), w:IMW-X(60), h:X(40), fontFace:F,
     fontSize:pt(12.7), bold:true, charSpacing:2.4, color:L_MUTED, align:"center", valign:"middle", isTextBox:true });
+  // the figure the case turns on, set on the image rather than in a row of statistics
+  s.addShape(p.ShapeType.rect, { x:IMX, y:X(498), w:IMW, h:H-X(498), fill:{ color:BLACK }, line:{ type:"none" } });
+  s.addText(o.hero[0], { x:IMX+X(40), y:X(532), w:IMW-X(80), h:X(76), fontFace:F, fontSize:pt(50),
+    bold:true, color:D_TEXT, margin:0, valign:"top", isTextBox:true });
+  s.addText(o.hero[1].toUpperCase(), { x:IMX+X(40), y:X(614), w:IMW-X(80), h:X(46), fontFace:F,
+    fontSize:pt(11.3), bold:true, charSpacing:2.4, color:CYAN, lineSpacing:pt(16), margin:0, valign:"top", isTextBox:true });
   eyebrow(s, o.eyebrow);
-  title(s, o.title, false, { w:X(500), size:o.size||pt(34), ls:pt(41), h:X(190) });
-  lead(s, o.lead, false, { y:X(250), w:X(500), h:X(110) });
-  stat(s, o.stats, X(420), false, MG, X(168));
+  title(s, o.title, false, { w:X(496), size:o.size||pt(30), ls:pt(36), h:X(124) });
+  beat(s, "The situation", o.situation, X(228), 78);
+  beat(s, "What EOV did",  o.move,      X(346), 122);
+  beat(s, "What changed",  o.result,    X(500), 78);
+  s.addText(o.scope, { x:MG, y:X(606), w:X(496), h:X(36), fontFace:F, fontSize:pt(11),
+    bold:true, charSpacing:1.6, color:L_MUTED, lineSpacing:pt(16), margin:0, valign:"top", isTextBox:true });
   footer(s, false);
   if (o.notes) s.addNotes(o.notes);
   return s;
@@ -114,7 +129,7 @@ function divider(t, sub){
     { x:MG, y:X(380), w:CW, h:X(30), fontFace:F, fontSize:pt(17.3), color:D_LEAD, margin:0, isTextBox:true });
   s.addText("CREDENTIALS  ·  2026", { x:MG, y:X(53), w:CW, h:X(20), fontFace:F, fontSize:pt(12.7),
     bold:true, charSpacing:3, color:CYAN, margin:0, valign:"middle", isTextBox:true });
-  s.addText("[NAME] · [TITLE] · [EMAIL] · [PHONE]", { x:MG, y:Y_FOOT, w:X(800), h:X(20),
+  s.addText("tanvi@eov.ae  ·  eov.ae  ·  Abu Dhabi and Dubai", { x:MG, y:Y_FOOT, w:X(800), h:X(20),
     fontFace:F, fontSize:pt(12.7), color:D_MUTED, margin:0, valign:"middle", isTextBox:true });
 }
 
@@ -126,8 +141,8 @@ function divider(t, sub){
   eyebrow(s, "Who we are");
   title(s, "An Emirati-founded integrated marketing agency, working in the UAE since 2006.",
     false, { w:X(500), size:pt(34), ls:pt(41), h:X(200) });
-  lead(s, "Abu Dhabi office · Dubai production facility. Six disciplines under one team.",
-    false, { y:X(310), w:X(500), h:X(60) });
+  lead(s, "Abu Dhabi office, Dubai production facility. Six disciplines under one team and one contract — which is what turns single accountability from a claim into a structure.",
+    false, { y:X(310), w:X(500), h:X(120) });
   stat(s, [["2","Emirates"],["6","Disciplines"],["20","Years"]], X(430), false, MG, X(168));
   footer(s, false);
   s.addNotes("Confirm the Al Quoz unit is a working production facility. Do not use the website's 400+ figure — it reads as headcount and is qualified as teams and partnerships.");
@@ -163,7 +178,9 @@ divider("The work.", "Four clients · rising stakes");
 /* 06 CLIENTS */
 { const s = slide();
   eyebrow(s, "Clients");
-  title(s, "Twenty years across government, luxury, retail and industry.", false, { h:X(70), size:pt(38) });
+  title(s, "Twenty years across government, luxury, retail and industry.", false, { h:X(62), size:pt(38) });
+  lead(s, "Government and semi-government work is won on published criteria and delivered under audit — the least forgiving way to build a client list, and the most durable.",
+    false, { y:X(156), w:CW, h:X(46) });
   ["OPEC","MUBADALA","ADNOC","RTA","DEWA","ESMA","MIN. OF ENERGY","MIN. OF ECONOMY",
    "FCA","DAMAC","HMS","MBR"].forEach((t,i) => {
     const col = i % 6, row = Math.floor(i/6);
@@ -192,9 +209,12 @@ divider("The work.", "Four clients · rising stakes");
   s.addNotes("Founding, boutique and ingredient detail from public sources. Confirm the boutique count and whether the Paris founding date may be stated as a fact.");
 }
 caseSlide({ eyebrow:"Forrey & Galland · luxury confectionery",
-  title:"Search visibility up 3.4×, with no paid media.",
-  lead:"Visibility built structurally rather than bought. Growth achieved with no paid search at any point across the period.",
-  stats:[["3.4×","Visibility"],["Zero","Paid search"],["1,510","Peak visits"]],
+  title:"Owning the occasions the business sells into.",
+  situation:"A hundred-year-old Parisian house trading in a market that knew the mall but not the name. Its four selling seasons move with the lunar calendar, so nothing carries over.",
+  move:"EOV built each occasion as a permanent asset rather than a campaign that expires — product, photography, film, retail and search produced as one programme, so the same work carried the boutique, the feed and the search result. No paid search at any point.",
+  result:"Search visibility up 3.4× and a peak of 1,510 visits, in a category where competitors buy their way to the top of the page.",
+  hero:["3.4×","Search visibility · zero paid media"],
+  scope:"Strategy · brand · photography · film · digital · retail · events",
   image:"ceylon-range.png" });
 gallerySlide({ eyebrow:"Forrey & Galland",
   title:"For a business built on occasions, the calendar is the strategy.",
@@ -204,8 +224,8 @@ gallerySlide({ eyebrow:"Forrey & Galland",
 { const s = slide();
   eyebrow(s, "Forrey & Galland · the calendar");
   title(s, "Four occasions, rebuilt every year.", false, { h:X(70), size:pt(38) });
-  lead(s, "The lunar calendar moves roughly eleven days a year, so nothing carries over. Each occasion runs as a full programme of product, photography, campaign, events and retail.",
-    false, { y:X(180), w:X(1000), h:X(56) });
+  lead(s, "The lunar calendar moves roughly eleven days a year, so nothing carries over and nothing can be rescheduled. Each occasion is rebuilt from scratch as a full programme — product, photography, campaign, events and retail — against a shelf date that does not move.",
+    false, { y:X(176), w:X(1000), h:X(80) });
   ["Ramadan","Eid al-Fitr","Eid al-Adha","Diwali"].forEach((t,i) => {
     const x = MG + i*X(288);
     img(s, x, X(270), X(269), X(180), "hatta-ramadan.png / uae-national-day.png", false);
@@ -233,8 +253,11 @@ gallerySlide({ eyebrow:"Forrey & Galland",
 /* 10-11 KGS */
 caseSlide({ eyebrow:"KGS · MetaFab® · industrial B2B",
   title:"Marketing a material that shields naval vessels.",
-  lead:"Metallised fabric attenuating EMF, EMI and RF at material level. Sold to engineers working to specification, on cycles measured in quarters. Most agencies decline this brief.",
-  stats:[["5.6×","Visibility"],["96","Keywords"],["40–90","dB shielding"]],
+  situation:"Metallised fabric attenuating EMF, EMI and RF at material level, sold to engineers buying against a specification. Most agencies decline this brief.",
+  move:"EOV stopped marketing the material and started marketing where it ends up. The specification stayed intact; the language moved to naval vessels, aircraft wiring and secure rooms — so a search that begins with a problem ends on the product.",
+  result:"Visibility up 5.6× across 96 ranked terms, in a category with no consumer search behaviour to borrow.",
+  hero:["5.6×","Visibility · 96 ranked terms · 40–90 dB"],
+  scope:"Positioning · technical content · search · trade collateral",
   image:"ferronato-product.png" });
 gallerySlide({ eyebrow:"KGS · MetaFab®",
   title:"Naval vessels. Aircraft wiring. Secure courtrooms.",
@@ -243,8 +266,11 @@ gallerySlide({ eyebrow:"KGS · MetaFab®",
 /* 12-13 FERRONATO */
 caseSlide({ eyebrow:"Ferronato Switzerland · smart accessories",
   title:"Privacy as a product, not a promise.",
-  lead:"Sleeves, pouches, totes and briefcases in metallised fabric. The benefit is physical, which is what made it provable. Global debut at the Swiss Pavilion, Expo 2020 Dubai.",
-  stats:[["300k+","Pavilion visitors"],["2023","First boutique"],["4","Product lines"]],
+  situation:"The same group’s industrial technology entering a lifestyle category where privacy was being promised by everyone and proven by no one.",
+  move:"EOV built the brand on the one claim competitors could not copy: a benefit the buyer can test in their own hand. The product became the proof, and the launch was staged where Swiss credibility is already assumed — the Swiss Pavilion at Expo 2020 Dubai.",
+  result:"Global debut in front of a pavilion audience of 300,000+, four product lines in market, and the first Swiss boutique open by May 2023.",
+  hero:["300k+","Pavilion audience at global debut"],
+  scope:"Brand · product marketing · retail · film · PR · launch",
   image:"ferronato-store.png",
   notes:"Send the PR record and this slide is finished: publications with dates and tier, retail doors, awareness study, influencer reach, and which markets US and EU distribution covers." });
 gallerySlide({ eyebrow:"Ferronato Switzerland",
@@ -255,7 +281,8 @@ gallerySlide({ eyebrow:"Ferronato Switzerland",
 { const s = slide();
   eyebrow(s, "Ferronato Switzerland · campaign");
   title(s, "Three festive films, one idea.", false, { h:X(70), size:pt(38) });
-  lead(s, "Going untraceable, told through Santa.", false, { y:X(180), w:X(900), h:X(40) });
+  lead(s, "The gift nobody thinks to ask for: an hour of being unreachable. One idea, carried across three films and a festive retail season.",
+    false, { y:X(176), w:X(900), h:X(60) });
   [["Gift of Privacy",""],["Disconnect and Connect",""],["Stay off-grid",""]].forEach((it,i) => {
     const x = MG + i*X(386);
     img(s, x, X(250), X(357), X(200), "[festive film still]", false);
@@ -280,9 +307,11 @@ gallerySlide({ eyebrow:"Ferronato Switzerland",
 }
 caseSlide({ eyebrow:"OPEC · UAE Night, Vienna",
   title:"A national event, delivered in a foreign capital.",
-  lead:"Organised by EOV in partnership with H.E. Suhail Al Mazrouei, Minister of Energy. A fixed date in the OPEC calendar, in a city with none of a home market's suppliers or margins for error.",
-  stats:[["Vienna","Foreign capital"],["Fixed","Date"],["H.E.","Ministerial partner"]],
-  size:pt(38),
+  situation:"A fixed date in the OPEC calendar at the Hofburg, Vienna, hosting ministers, diplomats and international media — with none of a home market’s suppliers to fall back on.",
+  move:"EOV treated the room as the deliverable and worked backwards from it. Protocol was settled before any creative decision was taken, and sourcing, production and rehearsal were built in Vienna to a standard set in Abu Dhabi.",
+  result:"700+ delegates hosted at UAE Night, in partnership with H.E. Suhail Al Mazrouei, Minister of Energy.",
+  hero:["700+","Delegates hosted · UAE Night"],
+  scope:"Event strategy · protocol · production · content · media",
   image:"eov-opec-vienna.jpg",
   notes:"Consent required — OPEC is intergovernmental and the Ministry federal. Still needed: the year, scope delivered, attendance." });
 gallerySlide({ eyebrow:"OPEC · UAE Night, Vienna",
@@ -343,8 +372,9 @@ divider("How the work runs.", "The firm · the method · the first step");
   title(s, "Six disciplines, one brief, one team.", false, { h:X(70), size:pt(38) });
   const cols = [["IN-HOUSE", ["Strategy and research","Brand and creative","Digital and ecommerce",
       "Communications and PR","Media planning and buying","Production and events"], GREY, L_HEAD, L_MUTED],
-    ["PARTNERED", ["[CONFIRM WHICH]","Named partners disclosed on every engagement.","",
-      "","",""], PANEL, D_TEXT, CYAN]];
+    ["PARTNERED", ["Specialist production and media depth",
+      "Brought in by name, on the record, and","disclosed on every engagement.","",
+      "Never sub-contracted quietly, and never","billed as in-house."], PANEL, D_TEXT, CYAN]];
   cols.forEach((c,i) => {
     const x = MG + i*X(584), dark = i===1;
     s.addShape(p.ShapeType.roundRect, { x:x, y:X(215), w:X(552), h:X(330), rectRadius:X(10),
@@ -364,9 +394,9 @@ divider("How the work runs.", "The firm · the method · the first step");
 { const s = slide();
   eyebrow(s, "How EOV works");
   title(s, "Three things settled before anything goes live.", false, { h:X(70), size:pt(38) });
-  [["01","Success defined before spend","The objective, the audience and the measure are agreed and written down first."],
-   ["02","Measurement built before launch","Tracking and reporting are built and tested before the first impression is bought."],
-   ["03","Accounts built in the client's name","Platforms, advertising accounts, analytics and CRM are created under the client's entity."]]
+  [["01","Success defined before spend","The objective, the audience and the measure are agreed and written down before budget is committed. Disagreement surfaces in week one, not at the review."],
+   ["02","Measurement built before launch","Tracking and reporting are built and tested before the first impression is bought, so the first report is a reading rather than a reconstruction."],
+   ["03","Accounts built in the client's name","Platforms, advertising accounts, analytics and CRM are created under the client's entity. When an agency leaves, the history stays."]]
   .forEach((it,i) => {
     const y = X(220) + i*X(112);
     s.addShape(p.ShapeType.roundRect, { x:MG, y:y, w:CW, h:X(96), rectRadius:X(10),
@@ -375,8 +405,8 @@ divider("How the work runs.", "The firm · the method · the first step");
       color:L_MUTED, valign:"middle", isTextBox:true });
     s.addText(it[1], { x:MG+X(104), y:y+X(22), w:X(420), h:X(30), fontFace:F, fontSize:pt(18.7),
       bold:true, color:L_HEAD, margin:0, valign:"top", isTextBox:true });
-    s.addText(it[2], { x:MG+X(540), y:y+X(24), w:X(560), h:X(56), fontFace:F, fontSize:pt(15.3),
-      color:L_BODY, lineSpacing:pt(21), margin:0, valign:"top", isTextBox:true });
+    s.addText(it[2], { x:MG+X(540), y:y+X(18), w:X(560), h:X(66), fontFace:F, fontSize:pt(14.7),
+      color:L_BODY, lineSpacing:pt(20), margin:0, valign:"top", isTextBox:true });
   });
   footer(s, false);
   s.addNotes("The third rule must be true today, or it comes out. It is the easiest claim in the deck for a client's technical lead to check.");
@@ -386,9 +416,9 @@ divider("How the work runs.", "The firm · the method · the first step");
 { const s = slide();
   eyebrow(s, "How an engagement runs");
   title(s, "One contract, one team, one point of accountability.", false, { h:X(70), size:pt(38) });
-  [["Definition","A short paid stage. Objective, audience and the measure of success, agreed and written down."],
+  [["Definition","A short paid stage that ends in a written definition rather than a proposal: objective, audience, and the measure of success."],
    ["Build","Platforms, measurement and creative built against that definition, in the client's name."],
-   ["Run","Delivery and reporting on a fixed cadence, with one senior contact throughout."]]
+   ["Run","Delivery and reporting on a fixed cadence, with one senior contact who does not change."]]
   .forEach((it,i) => {
     const x = MG + i*X(386);
     s.addShape(p.ShapeType.roundRect, { x:x, y:X(215), w:X(357), h:X(300), rectRadius:X(10),
@@ -408,14 +438,16 @@ divider("How the work runs.", "The firm · the method · the first step");
 { const s = slide();
   eyebrow(s, "The team");
   title(s, "The people on the account.", false, { h:X(70), size:pt(38) });
-  for (let i=0;i<4;i++){
+  const people = [["Mohamed Yousif","Chief Executive · founder","mohamed-yousif.png"],
+    ["[NAME]","[Role]","[portrait]"],["[NAME]","[Role]","[portrait]"],["[NAME]","[Role]","[portrait]"]];
+  people.forEach((pr,i) => {
     const x = MG + i*X(292);
-    img(s, x, X(215), X(269), X(280), "mohamed-yousif.png / [portrait]", false);
-    s.addText("[NAME]", { x:x, y:X(510), w:X(269), h:X(30), fontFace:F, fontSize:pt(18.7), bold:true,
+    img(s, x, X(215), X(269), X(280), pr[2], false);
+    s.addText(pr[0], { x:x, y:X(510), w:X(269), h:X(30), fontFace:F, fontSize:pt(18.7), bold:true,
       color:L_HEAD, margin:0, isTextBox:true });
-    s.addText("[Role]", { x:x, y:X(544), w:X(269), h:X(28), fontFace:F, fontSize:pt(15.3),
+    s.addText(pr[1], { x:x, y:X(544), w:X(269), h:X(28), fontFace:F, fontSize:pt(15.3),
       color:L_BODY, margin:0, isTextBox:true });
-  }
+  });
   footer(s, false);
   s.addNotes("Three to five named people, not the org chart. Also state how many work in Arabic to professional standard — buyers ask and most UAE agencies answer vaguely.");
 }
@@ -424,8 +456,8 @@ divider("How the work runs.", "The firm · the method · the first step");
 { const s = slide();
   eyebrow(s, "Partners");
   title(s, "Depth bought where it is better bought than built.", false, { h:X(70), size:pt(38) });
-  lead(s, "Capacity is the standing question asked of any agency this size. Named partners are disclosed on every engagement.",
-    false, { y:X(200), w:X(900), h:X(50) });
+  lead(s, "Capacity is the standing question asked of any agency this size. EOV answers it by naming the partners rather than absorbing them into a headcount figure.",
+    false, { y:X(198), w:X(940), h:X(60) });
   ["Marcollin","SAA","Palo Alto Tribunal"].forEach((t,i) => {
     const x = MG + i*X(386);
     s.addShape(p.ShapeType.roundRect, { x:x, y:X(300), w:X(357), h:X(210), rectRadius:X(10),
@@ -442,9 +474,9 @@ divider("How the work runs.", "The firm · the method · the first step");
   title(s, "The first conversation is about what cannot be done twice.", true, { size:pt(45.3), ls:pt(56), h:X(190) });
   s.addShape(p.ShapeType.roundRect, { x:MG, y:X(380), w:CW, h:X(150), rectRadius:X(10),
     fill:{ color:PANEL }, line:{ type:"none" } });
-  s.addText("[NAME], [TITLE]", { x:MG+X(40), y:X(408), w:X(500), h:X(30), fontFace:F, fontSize:pt(18.7),
+  s.addText("EOV Technology Innovation", { x:MG+X(40), y:X(408), w:X(500), h:X(30), fontFace:F, fontSize:pt(18.7),
     bold:true, color:D_TEXT, margin:0, isTextBox:true });
-  s.addText("[EMAIL]  ·  [PHONE]", { x:MG+X(40), y:X(444), w:X(500), h:X(28), fontFace:F,
+  s.addText("tanvi@eov.ae  ·  [direct line]", { x:MG+X(40), y:X(444), w:X(500), h:X(28), fontFace:F,
     fontSize:pt(15.3), color:D_LIST, margin:0, isTextBox:true });
   s.addText("eov.ae  ·  Abu Dhabi  ·  Dubai", { x:MG+X(40), y:X(478), w:X(500), h:X(28), fontFace:F,
     fontSize:pt(15.3), color:D_MUTED, margin:0, isTextBox:true });
