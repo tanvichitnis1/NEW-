@@ -5,200 +5,145 @@
       "x": 0,
       "y": 0,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "WhoWeAre.dc.html",
       "x": 1410,
       "y": 0,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "TheProblem.dc.html",
       "x": 2820,
       "y": 0,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "TheClaim.dc.html",
       "x": 4230,
       "y": 0,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "Clients.dc.html",
       "x": 0,
       "y": 910,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "ForreyBaseline.dc.html",
       "x": 1410,
       "y": 910,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "ForreyCalendar.dc.html",
       "x": 2820,
       "y": 910,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "OneGroup.dc.html",
       "x": 4230,
       "y": 910,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "KGS.dc.html",
       "x": 0,
       "y": 1820,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "Ferronato.dc.html",
       "x": 1410,
       "y": 1820,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "Vienna.dc.html",
       "x": 2820,
       "y": 1820,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "TheClose.dc.html",
       "x": 4230,
       "y": 1820,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "WhatWeDo.dc.html",
       "x": 0,
       "y": 2730,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "HowWeWork.dc.html",
       "x": 1410,
       "y": 2730,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "ThePeople.dc.html",
       "x": 2820,
       "y": 2730,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
+      "h": 720
     },
     {
       "file": "Main.dc.html",
       "x": 4230,
       "y": 2730,
       "w": 1280,
-      "h": 720,
-      "page": "page-1"
-    },
-    {
-      "file": "DirectionB.dc.html",
-      "x": 0,
-      "y": 0,
-      "w": 1280,
-      "h": 720,
-      "page": "page-2"
-    },
-    {
-      "file": "DirectionC.dc.html",
-      "x": 1410,
-      "y": 0,
-      "w": 1280,
-      "h": 720,
-      "page": "page-2"
+      "h": 720
     }
   ],
   "annotations": [
     {
       "id": "beat-1",
       "x": 0,
-      "y": -140,
+      "y": -150,
       "w": 560,
-      "page": "page-1",
       "text": "BEAT 1-2 \u00b7 Orientation, then recognition.\nSlide 03 closes on the line that opens the claim."
     },
     {
       "id": "beat-3",
       "x": 4230,
-      "y": -140,
+      "y": -150,
       "w": 520,
-      "page": "page-1",
       "text": "BEAT 3 \u00b7 The hinge. Inverted on purpose.\nStated once, never repeated."
     },
     {
       "id": "beat-4",
       "x": 0,
-      "y": 760,
-      "w": 620,
-      "page": "page-1",
+      "y": 755,
+      "w": 640,
       "text": "BEAT 4 \u00b7 Evidence, rising in stakes.\nForrey & Galland sets the baseline; KGS + Ferronato demonstrate range side by side; Vienna closes."
     },
     {
       "id": "beat-5",
       "x": 0,
-      "y": 2500,
+      "y": 2495,
       "w": 560,
-      "page": "page-1",
       "text": "BEAT 5 \u00b7 Risk. Disciplines sit here, after the proof \u2014 a list read before the evidence is a claim."
-    },
-    {
-      "id": "dirs",
-      "x": 0,
-      "y": -150,
-      "w": 640,
-      "page": "page-2",
-      "text": "Two alternate directions, shown on the hinge slide.\nB \u2014 warm archival, heavier serif.\nC \u2014 Swiss, structural, no serif at all."
-    }
-  ],
-  "pages": [
-    {
-      "id": "page-1",
-      "name": "Deck"
-    },
-    {
-      "id": "page-2",
-      "name": "Directions"
     }
   ],
   "launch": {
-    "view": "canvas",
-    "page": "page-1"
+    "view": "canvas"
   }
 }

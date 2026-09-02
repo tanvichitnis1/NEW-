@@ -2,13 +2,14 @@
 import json, os
 
 W, H = 1280, 720
-INK   = "#14181C"; PAPER = "#F7F5F1"; SLATE = "#5C6570"
-ACC   = "#9A6B2F"; RULE  = "#DEDAD2"
-D_PAPER = "#11151A"; D_INK = "#F2EFE9"; D_SLATE = "#98A2AE"; D_ACC = "#C79A54"; D_RULE = "#2A323B"
+INK   = "#2A2118"; PAPER = "#F2EDE4"; SLATE = "#6E6355"
+ACC   = "#8A6A3A"; RULE  = "#D9D1C2"
+D_PAPER = "#221B14"; D_INK = "#EFE8DA"; D_SLATE = "#A4988A"; D_ACC = "#C29A5C"; D_RULE = "#3A3026"
 
 FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-         'family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">')
-SER = "'Instrument Serif', Georgia, 'Times New Roman', serif"
+         'family=Archivo:wght@400;500;600&'
+         'family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap">')
+SER = "Newsreader, Georgia, 'Times New Roman', serif"
 SAN = "Archivo, 'Helvetica Neue', Helvetica, Arial, sans-serif"
 
 def shell(body, dark=False):
@@ -47,13 +48,16 @@ def num(n, dark=False):
 
 def eyebrow(t, dark=False):
     c = D_ACC if dark else ACC
-    return (f'<div style="font-family: {SAN}; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; '
-            f'text-transform: uppercase; color: {c}; margin-bottom: 26px;">{t}</div>')
+    r = D_RULE if dark else RULE
+    return (f'<div style="margin-bottom: 30px;">'
+            f'<div style="font-family: {SAN}; font-size: 10.5px; font-weight: 600; letter-spacing: 0.22em; '
+            f'text-transform: uppercase; color: {c}; margin-bottom: 12px;">{t}</div>'
+            f'<div style="width: 100%; height: 1px; background: {r};"></div></div>')
 
 def hl(t, size=52, dark=False, mb=22):
     c = D_INK if dark else INK
-    return (f'<div style="font-family: {SER}; font-weight: 400; font-size: {size}px; line-height: 1.08; '
-            f'letter-spacing: -0.015em; color: {c}; margin-bottom: {mb}px; max-width: 20ch; text-wrap: balance;">{t}</div>')
+    return (f'<div style="font-family: {SER}; font-weight: 400; font-size: {int(size*1.16)}px; line-height: 1.03; '
+            f'letter-spacing: -0.025em; color: {c}; margin-bottom: {mb}px; max-width: 19ch; text-wrap: balance;">{t}</div>')
 
 def body(t, dark=False, mw="48ch", size=19):
     c = D_SLATE if dark else SLATE
@@ -68,7 +72,7 @@ def figs(items, dark=False):
     c_k = D_SLATE if dark else SLATE
     cells = "".join(
         f'<div style="display: flex; flex-direction: column; gap: 8px;">'
-        f'<div style="font-family: {SER}; font-size: 46px; line-height: 1; color: {c_v};">{v}</div>'
+        f'<div style="font-family: {SER}; font-weight: 400; font-size: 54px; line-height: 1; color: {c_v}; letter-spacing: -0.02em;">{v}</div>'
         f'<div style="font-family: {SAN}; font-size: 10px; font-weight: 600; letter-spacing: 0.12em; '
         f'text-transform: uppercase; color: {c_k}; max-width: 17ch; line-height: 1.45;">{k}</div></div>'
         for v, k in items)
@@ -107,7 +111,7 @@ S = {}
 # 01 COVER — dark
 S["Cover"] = shell(
     f'<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 76px 88px;">'
-    f'<div style="font-family: {SER}; font-size: 88px; line-height: 1; color: {D_INK}; letter-spacing: -0.02em;">EOV</div>'
+    f'<div style="font-family: {SER}; font-size: 104px; line-height: 1; color: {D_INK}; letter-spacing: -0.035em;">EOV</div>'
     f'<div>'
     f'<div style="width: 64px; height: 2px; background: {D_ACC}; margin-bottom: 26px;"></div>'
     f'<div style="font-family: {SAN}; font-size: 21px; font-weight: 400; color: {D_INK}; line-height: 1.5;">'
@@ -129,14 +133,14 @@ S["TheProblem"] = shell(pad(
     hl("Most companies buy marketing in pieces. Nobody is answerable for the whole.", 50) +
     body("Brand here. Media there. A web developer, a PR firm, a production house. Each does its part.") +
     f'<div style="margin-top: 44px; padding-top: 26px; border-top: 1px solid {RULE}; font-family: {SER}; '
-    f'font-size: 27px; font-style: italic; color: {INK}; max-width: 34ch;">'
+    f'font-size: 29px; font-style: italic; color: {INK}; max-width: 34ch;">'
     f'It works — until something cannot be done twice.</div>' ) + num("03"))
 
 # 04 THE CLAIM — dark, the hinge
 S["TheClaim"] = shell(
     f'<div style="position: absolute; inset: 76px 88px; display: flex; flex-direction: column; justify-content: center;">'
     + eyebrow("What we are for", dark=True) +
-    f'<div style="font-family: {SER}; font-size: 76px; line-height: 1.04; letter-spacing: -0.02em; '
+    f'<div style="font-family: {SER}; font-size: 88px; line-height: 1.0; letter-spacing: -0.03em; '
     f'color: {D_INK}; max-width: 18ch; margin-bottom: 34px; text-wrap: balance;">'
     f'Twenty years of work that had to be right the first time.</div>'
     + body("An event staged abroad on a fixed date. A season that arrives whether you are ready. A launch with one window.", dark=True, mw="52ch")
@@ -165,7 +169,7 @@ S["ForreyCalendar"] = shell(
     + hl("For a business built on occasions, the calendar is the strategy.", 44)
     + body("Ramadan. Eid al-Fitr. Eid al-Adha. Diwali. Each a full programme — and the dates move eleven days a year.", mw="34ch")
     + f'<div style="margin-top: 32px; padding-top: 22px; border-top: 1px solid {RULE}; font-family: {SER}; '
-      f'font-size: 23px; font-style: italic; color: {INK}; max-width: 30ch;">'
+      f'font-size: 25px; font-style: italic; color: {INK}; max-width: 30ch;">'
       f'That is one business. The next is one owner with two.</div>'
     + '</div>'
     f'<div style="width: 44%; padding: 76px 88px 76px 0; display: flex;">'
@@ -196,7 +200,7 @@ S["Ferronato"] = shell(pad(
     figs([("300,000+","Visitors at the Expo 2020 Dubai debut"),("May 2023","First Swiss boutique opened"),("US + EU","Distribution expanded into")]) +
     body("A category-first launch is measured in coverage and doors, not clicks.") +
     f'<div style="margin-top: 26px; padding-top: 20px; border-top: 1px solid {RULE}; font-family: {SER}; '
-    f'font-size: 23px; font-style: italic; color: {INK};">'
+    f'font-size: 25px; font-style: italic; color: {INK};">'
     f'Same owner. Same agency. Two entirely different jobs.</div>', top=64) + num("10"))
 
 # 11 OPEC VIENNA
@@ -218,7 +222,7 @@ S["TheClose"] = shell(
     f'<div style="padding: 34px 88px 72px;">'
     f'<div style="font-family: {SAN}; font-size: 19px; font-weight: 400; color: {D_SLATE}; margin-bottom: 16px;">'
     f'A fixed date. A foreign city. A country being represented.</div>'
-    f'<div style="font-family: {SER}; font-size: 46px; line-height: 1.1; color: {D_INK}; letter-spacing: -0.015em;">'
+    f'<div style="font-family: {SER}; font-size: 52px; line-height: 1.06; color: {D_INK}; letter-spacing: -0.025em;">'
     f'Nothing about that brief allowed a second attempt.</div>'
     f'</div></div>' + num("12", dark=True), dark=True)
 
@@ -255,51 +259,29 @@ S["Main"] = shell(pad(
     f'[NAME], [TITLE]<br>[EMAIL] · [PHONE]<br>'
     f'<span style="color: {SLATE};">eov.ae · Abu Dhabi · Dubai</span></div>' ) + num("16"))
 
-# --- direction alternates (page 2) ---
-S["DirectionB"] = shell(
-    f'<div style="position: absolute; inset: 0; background: #F2EDE4; display: flex; align-items: flex-end; padding: 88px;">'
-    f'<div><div style="font-family: {SAN}; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; '
-    f'text-transform: uppercase; color: #8A6A3A; margin-bottom: 30px;">Direction B · warm archival</div>'
-    f'<div style="font-family: {SER}; font-size: 92px; line-height: 0.98; letter-spacing: -0.03em; color: #2A2118; max-width: 15ch;">'
-    f'Twenty years of work that had to be right the first time.</div></div></div>')
-
-S["DirectionC"] = shell(
-    f'<div style="position: absolute; inset: 0; background: #FFFFFF; display: flex; flex-direction: column; justify-content: center; padding: 88px;">'
-    f'<div style="width: 100%; height: 3px; background: #14181C; margin-bottom: 44px;"></div>'
-    f'<div style="font-family: {SAN}; font-size: 11px; font-weight: 700; letter-spacing: 0.2em; '
-    f'text-transform: uppercase; color: #14181C; margin-bottom: 26px;">Direction C · swiss / structural</div>'
-    f'<div style="font-family: {SAN}; font-size: 58px; font-weight: 600; line-height: 1.06; letter-spacing: -0.03em; '
-    f'color: #14181C; max-width: 20ch;">Twenty years of work that had to be right the first time.</div>'
-    f'<div style="width: 100%; height: 1px; background: #14181C; margin-top: 44px;"></div></div>')
 
 for name, src in S.items():
     open(f"{name}.dc.html", "w").write(src)
 
 order = ["Cover","WhoWeAre","TheProblem","TheClaim","Clients","ForreyBaseline","ForreyCalendar",
          "OneGroup","KGS","Ferronato","Vienna","TheClose","WhatWeDo","HowWeWork","ThePeople","Main"]
-arts = []
-for i, n in enumerate(order):
-    arts.append({"file": f"{n}.dc.html", "x": (i % 4) * (W + 130), "y": (i // 4) * (H + 190),
-                 "w": W, "h": H, "page": "page-1"})
-for i, n in enumerate(["DirectionB","DirectionC"]):
-    arts.append({"file": f"{n}.dc.html", "x": i * (W + 130), "y": 0, "w": W, "h": H, "page": "page-2"})
+arts = [{"file": f"{n}.dc.html", "x": (i % 4) * (W + 130), "y": (i // 4) * (H + 190), "w": W, "h": H}
+        for i, n in enumerate(order)]
 
 canvas = {
   "artboards": arts,
   "annotations": [
-    {"id": "beat-1", "x": 0, "y": -140, "w": 560, "page": "page-1",
+    {"id": "beat-1", "x": 0, "y": -150, "w": 560,
      "text": "BEAT 1-2 · Orientation, then recognition.\nSlide 03 closes on the line that opens the claim."},
-    {"id": "beat-3", "x": 4230, "y": -140, "w": 520, "page": "page-1",
+    {"id": "beat-3", "x": 4230, "y": -150, "w": 520,
      "text": "BEAT 3 · The hinge. Inverted on purpose.\nStated once, never repeated."},
-    {"id": "beat-4", "x": 0, "y": 760, "w": 620, "page": "page-1",
+    {"id": "beat-4", "x": 0, "y": 755, "w": 640,
      "text": "BEAT 4 · Evidence, rising in stakes.\nForrey & Galland sets the baseline; KGS + Ferronato demonstrate range side by side; Vienna closes."},
-    {"id": "beat-5", "x": 0, "y": 2500, "w": 560, "page": "page-1",
-     "text": "BEAT 5 · Risk. Disciplines sit here, after the proof — a list read before the evidence is a claim."},
-    {"id": "dirs", "x": 0, "y": -150, "w": 640, "page": "page-2",
-     "text": "Two alternate directions, shown on the hinge slide.\nB — warm archival, heavier serif.\nC — Swiss, structural, no serif at all."}
+    {"id": "beat-5", "x": 0, "y": 2495, "w": 560,
+     "text": "BEAT 5 · Risk. Disciplines sit here, after the proof — a list read before the evidence is a claim."}
   ],
-  "pages": [{"id": "page-1", "name": "Deck"}, {"id": "page-2", "name": "Directions"}],
-  "launch": {"view": "canvas", "page": "page-1"}
+  "launch": {"view": "canvas"}
 }
+import json
 open("canvas.json","w").write(json.dumps(canvas, indent=2))
-print("wrote", len(S), "artboards +", len(arts), "canvas entries")
+print("wrote", len(S), "artboards")
